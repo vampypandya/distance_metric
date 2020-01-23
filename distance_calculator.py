@@ -1,7 +1,4 @@
 from scipy.stats import wasserstein_distance, ks_2samp, energy_distance, anderson_ksamp
-# ['Frobenius Norm', 'L2 Norm', 'Wasserstein Distance', 'Frechet Inception Distance',
-                      # 'Students T-test', 'KS Test', 'Shapiro Wil Test', 'Anderson Darling Test']
-# from scipy.stats._hypotests import epps_singleton_2samp
 
 
 def frobenium_norm(data1, data2):
@@ -20,15 +17,15 @@ def t_test(data1, data2):
     pass
 
 def energy_dist(data1, data2):
-    data1 = data1.flatten()
-    data2 = data2.flatten()
+    # data1 = data1.flatten()
+    # data2 = data2.flatten()
     ene = energy_distance(data1, data2)
     print(ene)
     return str(ene)
 
 def ks_test(data1, data2):
-    data1 = data1.flatten()
-    data2 = data2.flatten()
+    # data1 = data1.flatten()
+    # data2 = data2.flatten()
     ks = ks_2samp(data1, data2)
     print(ks)
     return str(ks)
@@ -39,23 +36,23 @@ def shapiro_will_test(data1, data2):
 
 
 def anderson_darling_test(data1, data2):
-    data1 = data1.flatten()
-    data2 = data2.flatten()
+    # data1 = data1.flatten()
+    # data2 = data2.flatten()
     ander = anderson_ksamp([data1, data2])
     print(ander)
     return str(ander)
 
 def wass_distance(data1, data2):
-    data1 = data1.flatten()
-    data2 = data2.flatten()
+    # data1 = data1.flatten()
+    # data2 = data2.flatten()
     wass = wasserstein_distance(data1, data2)
     print(wass)
     return str(wass)
 
 
 def epps_singleton_test(data1, data2):
-    data1 = data1.flatten()
-    data2 = data2.flatten()
+    # data1 = data1.flatten()
+    # data2 = data2.flatten()
     epps = epps_singleton_2samp(data1, data2)
     print(epps)
     return str(epps)
